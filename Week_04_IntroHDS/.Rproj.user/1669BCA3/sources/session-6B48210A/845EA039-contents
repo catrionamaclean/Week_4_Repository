@@ -1,0 +1,49 @@
+---
+title: "Week_04_Example_R_Markdown"
+author: "Catriona Maclean"
+date: "2023-10-10"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Week 04 - Introduction to Health Data Science
+
+This is a markdown document which will knit to pdf.
+
+I have created it for the week 4 exercise of Introduction to Health Data Science
+
+It has to include 2 code chunks and some text with section headers and 2 types of list
+
+
+## A Section With Some Lists
+
+### Things I can see from where I am *sitting*
+
+-   A calendar
+-   A wicker basket
+-   An ironing board
+-   A small lamp
+
+### Things I need to do this evening **in order of importance**
+
+1.  Walk the dog
+2.  Have tea
+3.  Do a grocery shop
+4.  Listen to an audiobook
+
+## Some Code
+
+A plot of pressure from an inbuilt R dataset - with the code chunk hidden.
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+The summary statistics from the cars dataset - with the code chunk included.
+
+```{r cars}
+summary(cars)
+```
