@@ -1,0 +1,2 @@
+"0","coplot(mpg ~ disp | as.factor(cyl), data = mtcars,"
+"0","       panel = panel.smooth, rows = 1)"

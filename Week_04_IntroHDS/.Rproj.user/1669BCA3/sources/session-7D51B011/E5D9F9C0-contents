@@ -17,7 +17,6 @@ I have created it for the week 4 exercise of Introduction to Health Data Science
 
 It has to include 2 code chunks and some text with section headers and 2 types of list
 
-
 ## A Section With Some Lists
 
 ### Things I can see from where I am *sitting*
@@ -29,10 +28,10 @@ It has to include 2 code chunks and some text with section headers and 2 types o
 
 ### Things I need to do this evening **in order of importance**
 
-1.  Walk the dog
-2.  Have tea
-3.  Do a grocery shop
-4.  Listen to an audiobook
+> 1.  Walk the dog
+> 2.  Have tea
+> 3.  Do a grocery shop
+> 4.  Listen to an audiobook
 
 ## Some Code
 
@@ -46,4 +45,24 @@ The summary statistics from the cars dataset - with the code chunk included.
 
 ```{r cars}
 summary(cars)
+```
+
+## Another section
+
+Here is a further update to the R Markdown document, which I'll then upload to GitHub.
+
+```{r}
+require(graphics)
+pairs(mtcars, main = "mtcars data", gap = 1/4)
+coplot(mpg ~ disp | as.factor(cyl), data = mtcars,
+       panel = panel.smooth, rows = 1)
+## possibly more meaningful, e.g., for summary() or bivariate plots:
+mtcars2 <- within(mtcars, {
+   vs <- factor(vs, labels = c("V", "S"))
+   am <- factor(am, labels = c("automatic", "manual"))
+   cyl  <- ordered(cyl)
+   gear <- ordered(gear)
+   carb <- ordered(carb)
+})
+summary(mtcars2)
 ```
